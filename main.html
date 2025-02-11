@@ -172,6 +172,148 @@ query {
             </ul>
         </article>
         
+        <h1>Dicionário de Engenharia de Dados</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <section id="pipeline-dados">
+                <h2>Pipeline de Dados</h2>
+                <p>O pipeline de dados automatiza a movimentação de dados entre diferentes sistemas, garantindo sua coleta, transformação e armazenamento de forma contínua.</p>
+                <h3>Etapas de um Pipeline:</h3>
+                <ul>
+                    <li><strong>Fonte de Dados:</strong> Sistemas de onde os dados são coletados.</li>
+                    <li><strong>ETL/ELT:</strong> Processo de transformação dos dados.</li>
+                    <li><strong>Destino Final:</strong> Data Warehouse ou Data Lake.</li>
+                </ul>
+                <img src="https://tse3.mm.bing.net/th?id=OIP.Jnn091onYDHK3SA3Gh5SpwHaDt&pid=Api&P=0&h=180" alt="Ilustração de Pipeline de Dados">
+            </section>
+
+            <section id="etl-vs-elt">
+                <h2>ETL vs ELT</h2>
+                <p><strong>ETL (Extract, Transform, Load):</strong> Os dados são extraídos, transformados e depois carregados no destino.</p>
+                <p><strong>ELT (Extract, Load, Transform):</strong> Os dados são extraídos e carregados diretamente no destino, e a transformação ocorre posteriormente.</p>
+                <h3>Diferença Principal:</h3>
+                <ul>
+                    <li><strong>ETL:</strong> Adequado para data warehouses tradicionais.</li>
+                    <li><strong>ELT:</strong> Melhor para data lakes e ambientes modernos.</li>
+                </ul>
+                <img src="https://blog.bismart.com/hs-fs/hubfs/Imported_Blog_Media/ETL%20vs%20ELT%20proceso%20y%20arquitectura-Sep-26-2023-08-49-27-9469-AM.jpg" alt="Ilustração ETL vs ELT">
+            </section>
+
+            <section id="data-warehousing">
+                <h2>Data Warehousing</h2>
+                <p>Um data warehouse é um repositório centralizado que organiza e armazena dados estruturados para consultas rápidas e análise de dados.</p>
+                <h3>Principais características:</h3>
+                <ul>
+                    <li>Dados estruturados.</li>
+                    <li>Focado em análise histórica e relatórios.</li>
+                    <li>Exemplos de ferramentas: Snowflake, Amazon Redshift, Google BigQuery.</li>
+                </ul>
+            </section>
+
+            <section id="data-lake">
+                <h2>Data Lake</h2>
+                <p>Um data lake armazena dados em seu formato original (estruturado, semiestruturado e não estruturado). É mais flexível, mas requer governança adequada.</p>
+                <h3>Diferença entre Data Lake e Data Warehouse:</h3>
+                <ul>
+                    <li><strong>Data Warehouse:</strong> Dados estruturados, organizados para consultas.</li>
+                    <li><strong>Data Lake:</strong> Dados brutos, sem estrutura definida.</li>
+                </ul>
+            </section>
+
+            <section id="big-data">
+                <h2>Big Data</h2>
+                <p><strong>Big Data</strong> refere-se a conjuntos massivos de dados que requerem tecnologias especiais para armazenamento e processamento.</p>
+                <h3>Os 5 Vs do Big Data:</h3>
+                <ul>
+                    <li><strong>Volume:</strong> Grande quantidade de dados.</li>
+                    <li><strong>Velocidade:</strong> Dados gerados em alta frequência.</li>
+                    <li><strong>Variedade:</strong> Diferentes formatos de dados.</li>
+                    <li><strong>Veracidade:</strong> Dados confiáveis e precisos.</li>
+                    <li><strong>Valor:</strong> Insights obtidos dos dados.</li>
+                </ul>
+            </section>
+            <section id="armazenamento-dados">
+                <h2>Armazenamento de Dados</h2>
+                <p>O armazenamento de dados envolve escolher a melhor tecnologia para guardar informações de forma segura e acessível.</p>
+                <h3>Principais tipos de armazenamento:</h3>
+                <ul>
+                    <li><strong>Bancos de Dados Relacionais (SQL):</strong> Oracle, MySQL, PostgreSQL.</li>
+                    <li><strong>Bancos de Dados NoSQL:</strong> MongoDB, Cassandra, Redis.</li>
+                    <li><strong>Armazenamento em Nuvem:</strong> AWS S3, Azure Blob Storage, Google Cloud Storage.</li>
+                </ul>
+            </section>
+            
+            <section id="tecnologias-ferramentas">
+                <h2>Tecnologias e Ferramentas</h2>
+                <p>Na engenharia de dados, diversas tecnologias são usadas para diferentes etapas do processo:</p>
+                <h3>ETL:</h3>
+                <ul>
+                    <li>Apache NiFi</li>
+                    <li>Talend</li>
+                    <li>Informatica</li>
+                </ul>
+                <h3>Big Data:</h3>
+                <ul>
+                    <li>Hadoop</li>
+                    <li>Spark</li>
+                    <li>Kafka</li>
+                </ul>
+                <h3>Data Warehouse:</h3>
+                <ul>
+                    <li>Snowflake</li>
+                    <li>Amazon Redshift</li>
+                    <li>Google BigQuery</li>
+                </ul>
+                <h3>Data Lake:</h3>
+                <ul>
+                    <li>AWS S3</li>
+                    <li>Azure Data Lake</li>
+                    <li>Google Cloud Storage</li>
+                </ul>
+            </section>
+            
+            <section id="qualidade-dados">
+                <h2>Qualidade de Dados</h2>
+                <p>A qualidade de dados refere-se à precisão, consistência e integridade das informações.</p>
+                <h3>Principais aspectos:</h3>
+                <ul>
+                    <li><strong>Validade:</strong> Os dados estão no formato correto?</li>
+                    <li><strong>Consistência:</strong> Dados coerentes entre sistemas.</li>
+                    <li><strong>Integridade:</strong> Dados completos e sem lacunas.</li>
+                </ul>
+            </section>
+            
+            <section id="arquitetura-dados">
+                <h2>Arquitetura de Dados</h2>
+                <p>A arquitetura de dados define como os dados são coletados, armazenados e processados dentro de uma organização.</p>
+                <h3>Principais componentes:</h3>
+                <ul>
+                    <li><strong>Fonte de Dados:</strong> Origem das informações.</li>
+                    <li><strong>Pipeline de Dados:</strong> Fluxo de processamento.</li>
+                    <li><strong>Armazenamento:</strong> Data lake ou data warehouse.</li>
+                    <li><strong>Ferramentas de análise:</strong> Power BI, Tableau.</li>
+                </ul>
+            </section>
+            
+            <section id="arquitetura-serverless">
+                <h2>Arquitetura Serverless</h2>
+                <p>Na arquitetura serverless, o desenvolvedor não precisa gerenciar servidores diretamente. A infraestrutura é escalada automaticamente.</p>
+                <h3>Benefícios:</h3>
+                <ul>
+                    <li>Menos custos operacionais.</li>
+                    <li>Escalabilidade automática.</li>
+                    <li>Foco no código e nas funcionalidades.</li>
+                </ul>
+            </section>
+            
     </main>
     <footer>
         <p><small>&copy; Infinity 2025 - Todos os direitos reservados.</small></p>
