@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Blog</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <header>
-        <h1>Meu Blog</h1>
+        <h1>Dicionário de API para Novos Desenvolvedores</h1>
         <nav>
-            <a href="index.html">Home</a>
+            <a href="index.html">Temas</a>
             <a href="about.html">Sobre</a>
+            <a href="profissional.html">Profissional</a>
         </nav>
     </header>
     <main>
@@ -24,7 +25,8 @@
                 <li><strong>WebSockets</strong>: Mantém conexões abertas para comunicação bidirecional em tempo real.</li>
                 <li><strong>gRPC</strong>: Usa protocolo HTTP/2 e se baseia em contratos definidos com Protocol Buffers.</li>
             </ul>
-            <h2>"Endpoints"</h2>
+
+            <h2>Endpoints</h2>
             <ul>
                 <li>Exemplo de endpoint em uma API REST:</li>
                 <code>GET https://api.exemplo.com/users</code>
@@ -32,6 +34,7 @@
                 <li><strong>Recurso</strong>: /users</li>
                 <li><strong>Parâmetros</strong> (opcionais): /users?id=1</li>
             </ul>
+
             <h2>Autenticação e Autorização</h2>
             <ul>
                 <li><strong>Autenticação</strong>: Garante que um usuário é quem diz ser (ex: JWT, OAuth, API Key).</li>
@@ -44,7 +47,8 @@
                     </ul>
                 </li>
             </ul>
-            h2>Request e Response</h2>
+
+            <h2>Request e Response</h2>
             <ul>
                 <li><strong>Request (Requisição)</strong>: Envio de dados para a API
                     <pre>
@@ -62,10 +66,114 @@ Authorization: Bearer token
 }
                     </pre>
                 </li>
+                <li><strong>Códigos de status HTTP comuns</strong>:
+                    <ul>
+                        <li>200 OK - Sucesso</li>
+                        <li>201 Created - Recurso criado</li>
+                        <li>400 Bad Request - Erro na requisição</li>
+                        <li>401 Unauthorized - Falta de autenticação</li>
+                        <li>404 Not Found - Recurso não encontrado</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h2>Rate Limiting</h2>
+            <ul>
+                <li>Controle da quantidade de requisições permitidas por um período.</li>
+                <li>Exemplo de resposta ao exceder o limite:
+                    <pre>
+{
+    "error": "Too Many Requests",
+    "retry_after": 30
+}
+                    </pre>
+                </li>
+            </ul>
+
+            <h2>Versionamento e Documentação</h2>
+            <ul>
+                <li>Versionamento: Manter diferentes versões da API para compatibilidade.</li>
+                <li>Exemplo de versão no endpoint: <code>https://api.exemplo.com/v1/users</code></li>
+                <li>Documentação: Explicação clara do uso da API.
+                    <ul>
+                        <li>Ferramentas comuns: Swagger (OpenAPI), Postman, API Blueprint</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h2>Webhooks</h2>
+            <ul>
+                <li>Mecanismo para APIs notificarem eventos de forma assíncrona.</li>
+                <li>Exemplo: Quando um pagamento é aprovado, um webhook pode notificar um sistema externo.</li>
+                <li>
+                    <pre>
+{
+    "event": "payment_success",
+    "amount": 100.00,
+    "user": "joao@email.com"
+}
+                    </pre>
+                </li>
+            </ul>
+
+            <h2>Testes de API e Caching</h2>
+            <ul>
+                <li>Testes de API:
+                    <ul>
+                        <li>Ferramentas: Postman, Jest, Newman.</li>
+                        <li>Testes unitários, de integração e de carga.</li>
+                    </ul>
+                </li>
+                <li>Caching de API:
+                    <ul>
+                        <li>Evita requisições desnecessárias para otimizar performance.</li>
+                        <li>Ferramentas: Redis, Varnish, Cloudflare.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h2>API Gateway</h2>
+            <ul>
+                <li>Intermediário entre cliente e APIs internas.</li>
+                <li>Benefícios:
+                    <ul>
+                        <li>Segurança (autenticação, autorização)</li>
+                        <li>Controle de tráfego (rate limiting, caching)</li>
+                        <li>Balanceamento de carga</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h2>GraphQL</h2>
+            <ul>
+                <li>Alternativa ao REST que permite ao cliente definir exatamente os dados que precisa.</li>
+                <li>Exemplo de requisição GraphQL:
+                    <pre>
+query {
+    user(id: 1) {
+        name
+        email
+    }
+}
+                    </pre>
+                </li>
+                <li>Exemplo de resposta:
+                    <pre>
+{
+    "data": {
+        "user": {
+            "name": "João Silva",
+            "email": "joao@email.com"
+        }
+    }
+}
+                    </pre>
+                </li>
+            </ul>
         </article>
     </main>
     <footer>
-        <p>&copy; Infinity 2025</p>
+        <p><small>&copy; Infinity 2025 - Todos os direitos reservados.</small></p>
     </footer>
 </body>
 </html>
