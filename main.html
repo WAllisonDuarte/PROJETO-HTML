@@ -4,91 +4,167 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Blog</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./Style.css">
 </head>
 <body>
     <header>
-        <h1>Meu Blog</h1>
+        <h1>Dicionário de API para Novos Desenvolvedores</h1>
         <nav>
-            <a href="index.html">Home</a>
+            <a href="index.html">Temas</a>
             <a href="about.html">Sobre</a>
+            <a href="profissional.html">Profissional</a>
         </nav>
     </header>
     <main>
         <article>
-            <h4>Topologia de Rede</h4>
-            <p>A topologia de rede define a estrutura e a forma como os dispositivos estão interconectados. Os principais tipos são:</p>
-          
-                <p>Barramento: Todos os dispositivos compartilham um único meio de transmissão.</p>
-                <p>Anel: Os dispositivos estão conectados em um círculo fechado.</p>
-                <p>Estrela: Todos os dispositivos se conectam a um ponto central.</p>
-                <p>Malha: Cada dispositivo está conectado a vários outros.</p>
-                <p>Híbrida: Combina diferentes topologias.</p>
 
-            <h4>Protocolos de Rede</h4>
-            <p>Protocolos de rede são regras que definem a comunicação entre dispositivos. Alguns exemplos:</p>  
-                <p>HTTP/HTTPS: Para comunicação web.</p>  
-                <p>TCP/IP: Base da internet.</p>  
-                <p>UDP: Protocolo rápido para transmissão de dados.</p>  
-                <p>DNS: Resolve nomes de domínios para endereços IP.</p>
-                <p>FTP/SFTP: Transferência de arquivos.</p>
-            
-                <h4>Endereçamento de Rede</h4>
-                <p>Define como os dispositivos são identificados na rede.</p>  
-                    <p>IPv4: Formato padrão com endereços de 32 bits.</p>  
-                    <p>IPv6: Substitui o IPv4, usando 128 bits.</p>  
-                    <p>MAC Address: Endereço físico da interface de rede.</p>  
-                 
-    
-                <h4>Camadas de Rede</h4>
-                <p>O modelo OSI define sete camadas para padronizar a comunicação:</p>  
-                    <p>Física</p>  
-                    <p>Enlace de Dados</p>  
-                    <p>Rede</p>  
-                    <p>Transporte</p> 
-                    <p>Sessão</p>  
-                    <p>Apresentação</p>
-                    <p>Aplicação</p>
-    
-                <h4>Dispositivos de Rede</h4>
-                <p>Os dispositivos conectam e gerenciam o tráfego de rede:</p>  
-                    <p>Roteador: Encaminha pacotes entre redes.</p>  
-                    <p>Switch: Gerencia conexões locais.</p>  
-                    <p>Modem: Converte sinais digitais e analógicos.</p>  
-                    <p>Access Point: Expande a rede sem fio.</p> 
-                
-                <h4>Tipos de Redes</h4>
-                <p>Classificação com base na área de cobertura:</p>  
-                    <p>LAN (Local Area Network): Pequena área.</p>  
-                    <p>MAN (Metropolitan Area Network): Abrange uma cidade.</p>  
-                    <p>WAN (Wide Area Network): Redes globais, como a internet.</p>  
-                    <p>PAN (Personal Area Network): Redes pessoais, como Bluetooth.</p> 
-    
-                <h4>Segurança de Redes</h4>
-                <p>Principais conceitos:</p>  
-                    <p>Firewall: Filtra tráfego de rede.</p>  
-                    <p>Criptografia: Protege dados durante a transmissão.</p>  
-                    <p>VPN: Garante conexões seguras.</p>  
-                    <p>Autenticação: Controle de acesso.</p>  
-    
-                <h4>Comutação de Pacotes vs. Comutação de Circuitos</h4>
-                    <p>Comutação de Pacotes: Dados divididos em pacotes que são transmitidos independentemente.</p>
-                    <p>Comutação de Circuitos: Requer conexão dedicada antes da transmissão.</p>
-                
-                <h4>Largura de Banda e Latência</h4>         
-                    <p>Largura de Banda: Quantidade de dados que podem ser transmitidos em um tempo.</p>
-                    <p>Latência: Tempo de resposta entre envio e recebimento de dados.</p>
-    
-                <h4>Tecnologias de Rede</h4>         
-                <p>Principais tecnologias utilizadas:</p>
-                    <p>Wi-Fi: Conexão sem fio.</p>
-                    <p>Ethernet: Rede com fio.</p>
-                    <p>5G: Alta velocidade para dispositivos móveis.</p>
-                    <p>Fibra Óptica: Conexão de alta velocidade por meio de pulsos de luz.</p>
         </article>
+        
+        <h1>Dicionário de Engenharia de Dados</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <section id="pipeline-dados">
+                <h2>Pipeline de Dados</h2>
+                <p>O pipeline de dados automatiza a movimentação de dados entre diferentes sistemas, garantindo sua coleta, transformação e armazenamento de forma contínua.</p>
+                <h3>Etapas de um Pipeline:</h3>
+                <ul>
+                    <li><strong>Fonte de Dados:</strong> Sistemas de onde os dados são coletados.</li>
+                    <li><strong>ETL/ELT:</strong> Processo de transformação dos dados.</li>
+                    <li><strong>Destino Final:</strong> Data Warehouse ou Data Lake.</li>
+                </ul>
+                <img src="https://tse3.mm.bing.net/th?id=OIP.Jnn091onYDHK3SA3Gh5SpwHaDt&pid=Api&P=0&h=180" alt="Ilustração de Pipeline de Dados">
+            </section>
+
+            <section id="etl-vs-elt">
+                <h2>ETL vs ELT</h2>
+                <p><strong>ETL (Extract, Transform, Load):</strong> Os dados são extraídos, transformados e depois carregados no destino.</p>
+                <p><strong>ELT (Extract, Load, Transform):</strong> Os dados são extraídos e carregados diretamente no destino, e a transformação ocorre posteriormente.</p>
+                <h3>Diferença Principal:</h3>
+                <ul>
+                    <li><strong>ETL:</strong> Adequado para data warehouses tradicionais.</li>
+                    <li><strong>ELT:</strong> Melhor para data lakes e ambientes modernos.</li>
+                </ul>
+                <img src="https://blog.bismart.com/hs-fs/hubfs/Imported_Blog_Media/ETL%20vs%20ELT%20proceso%20y%20arquitectura-Sep-26-2023-08-49-27-9469-AM.jpg" alt="Ilustração ETL vs ELT">
+            </section>
+
+            <section id="data-warehousing">
+                <h2>Data Warehousing</h2>
+                <p>Um data warehouse é um repositório centralizado que organiza e armazena dados estruturados para consultas rápidas e análise de dados.</p>
+                <h3>Principais características:</h3>
+                <ul>
+                    <li>Dados estruturados.</li>
+                    <li>Focado em análise histórica e relatórios.</li>
+                    <li>Exemplos de ferramentas: Snowflake, Amazon Redshift, Google BigQuery.</li>
+                </ul>
+            </section>
+
+            <section id="data-lake">
+                <h2>Data Lake</h2>
+                <p>Um data lake armazena dados em seu formato original (estruturado, semiestruturado e não estruturado). É mais flexível, mas requer governança adequada.</p>
+                <h3>Diferença entre Data Lake e Data Warehouse:</h3>
+                <ul>
+                    <li><strong>Data Warehouse:</strong> Dados estruturados, organizados para consultas.</li>
+                    <li><strong>Data Lake:</strong> Dados brutos, sem estrutura definida.</li>
+                </ul>
+            </section>
+
+            <section id="big-data">
+                <h2>Big Data</h2>
+                <p><strong>Big Data</strong> refere-se a conjuntos massivos de dados que requerem tecnologias especiais para armazenamento e processamento.</p>
+                <h3>Os 5 Vs do Big Data:</h3>
+                <ul>
+                    <li><strong>Volume:</strong> Grande quantidade de dados.</li>
+                    <li><strong>Velocidade:</strong> Dados gerados em alta frequência.</li>
+                    <li><strong>Variedade:</strong> Diferentes formatos de dados.</li>
+                    <li><strong>Veracidade:</strong> Dados confiáveis e precisos.</li>
+                    <li><strong>Valor:</strong> Insights obtidos dos dados.</li>
+                </ul>
+            </section>
+            <section id="armazenamento-dados">
+                <h2>Armazenamento de Dados</h2>
+                <p>O armazenamento de dados envolve escolher a melhor tecnologia para guardar informações de forma segura e acessível.</p>
+                <h3>Principais tipos de armazenamento:</h3>
+                <ul>
+                    <li><strong>Bancos de Dados Relacionais (SQL):</strong> Oracle, MySQL, PostgreSQL.</li>
+                    <li><strong>Bancos de Dados NoSQL:</strong> MongoDB, Cassandra, Redis.</li>
+                    <li><strong>Armazenamento em Nuvem:</strong> AWS S3, Azure Blob Storage, Google Cloud Storage.</li>
+                </ul>
+            </section>
+            
+            <section id="tecnologias-ferramentas">
+                <h2>Tecnologias e Ferramentas</h2>
+                <p>Na engenharia de dados, diversas tecnologias são usadas para diferentes etapas do processo:</p>
+                <h3>ETL:</h3>
+                <ul>
+                    <li>Apache NiFi</li>
+                    <li>Talend</li>
+                    <li>Informatica</li>
+                </ul>
+                <h3>Big Data:</h3>
+                <ul>
+                    <li>Hadoop</li>
+                    <li>Spark</li>
+                    <li>Kafka</li>
+                </ul>
+                <h3>Data Warehouse:</h3>
+                <ul>
+                    <li>Snowflake</li>
+                    <li>Amazon Redshift</li>
+                    <li>Google BigQuery</li>
+                </ul>
+                <h3>Data Lake:</h3>
+                <ul>
+                    <li>AWS S3</li>
+                    <li>Azure Data Lake</li>
+                    <li>Google Cloud Storage</li>
+                </ul>
+            </section>
+            
+            <section id="qualidade-dados">
+                <h2>Qualidade de Dados</h2>
+                <p>A qualidade de dados refere-se à precisão, consistência e integridade das informações.</p>
+                <h3>Principais aspectos:</h3>
+                <ul>
+                    <li><strong>Validade:</strong> Os dados estão no formato correto?</li>
+                    <li><strong>Consistência:</strong> Dados coerentes entre sistemas.</li>
+                    <li><strong>Integridade:</strong> Dados completos e sem lacunas.</li>
+                </ul>
+            </section>
+            
+            <section id="arquitetura-dados">
+                <h2>Arquitetura de Dados</h2>
+                <p>A arquitetura de dados define como os dados são coletados, armazenados e processados dentro de uma organização.</p>
+                <h3>Principais componentes:</h3>
+                <ul>
+                    <li><strong>Fonte de Dados:</strong> Origem das informações.</li>
+                    <li><strong>Pipeline de Dados:</strong> Fluxo de processamento.</li>
+                    <li><strong>Armazenamento:</strong> Data lake ou data warehouse.</li>
+                    <li><strong>Ferramentas de análise:</strong> Power BI, Tableau.</li>
+                </ul>
+            </section>
+            
+            <section id="arquitetura-serverless">
+                <h2>Arquitetura Serverless</h2>
+                <p>Na arquitetura serverless, o desenvolvedor não precisa gerenciar servidores diretamente. A infraestrutura é escalada automaticamente.</p>
+                <h3>Benefícios:</h3>
+                <ul>
+                    <li>Menos custos operacionais.</li>
+                    <li>Escalabilidade automática.</li>
+                    <li>Foco no código e nas funcionalidades.</li>
+                </ul>
+            </section>
+            
     </main>
     <footer>
-        <p>&copy; 2023 Meu Blog</p>
+        <p><small>&copy; Infinity 2025 - Todos os direitos reservados.</small></p>
     </footer>
 </body>
 </html>
