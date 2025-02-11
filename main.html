@@ -8,150 +8,173 @@
 </head>
 <body>
     <header>
-        <h1>Dicionário de Engenharia de Dados</h1>
+        <h1>Dicionário de API para Novos Desenvolvedores</h1>
         <nav>
-            <a href="index.html">Home</a>
+            <a href="index.html">Temas</a>
             <a href="about.html">Sobre</a>
+            <a href="profissional.html">Profissional</a>
         </nav>
     </header>
     <main>
         <article>
-            <section id="pipeline-dados">
-                <h2>Pipeline de Dados</h2>
-                <p>O pipeline de dados automatiza a movimentação de dados entre diferentes sistemas, garantindo sua coleta, transformação e armazenamento de forma contínua.</p>
-                <h3>Etapas de um Pipeline:</h3>
-                <ul>
-                    <li><strong>Fonte de Dados:</strong> Sistemas de onde os dados são coletados.</li>
-                    <li><strong>ETL/ELT:</strong> Processo de transformação dos dados.</li>
-                    <li><strong>Destino Final:</strong> Data Warehouse ou Data Lake.</li>
-                </ul>
-                <img src="https://tse3.mm.bing.net/th?id=OIP.Jnn091onYDHK3SA3Gh5SpwHaDt&pid=Api&P=0&h=180" alt="Ilustração de Pipeline de Dados">
-            </section>
+            <h2>Tipos de API</h2>
+            <ul>
+                <li><strong>REST</strong>: Baseada em HTTP e geralmente usa JSON para comunicação.</li>
+                <li><strong>SOAP</strong>: Utiliza XML para troca de mensagens e tem regras mais rígidas.</li>
+                <li><strong>GraphQL</strong>: Permite consultas mais flexíveis, onde o cliente especifica os dados que deseja receber.</li>
+                <li><strong>WebSockets</strong>: Mantém conexões abertas para comunicação bidirecional em tempo real.</li>
+                <li><strong>gRPC</strong>: Usa protocolo HTTP/2 e se baseia em contratos definidos com Protocol Buffers.</li>
+            </ul>
 
-            <section id="etl-vs-elt">
-                <h2>ETL vs ELT</h2>
-                <p><strong>ETL (Extract, Transform, Load):</strong> Os dados são extraídos, transformados e depois carregados no destino.</p>
-                <p><strong>ELT (Extract, Load, Transform):</strong> Os dados são extraídos e carregados diretamente no destino, e a transformação ocorre posteriormente.</p>
-                <h3>Diferença Principal:</h3>
-                <ul>
-                    <li><strong>ETL:</strong> Adequado para data warehouses tradicionais.</li>
-                    <li><strong>ELT:</strong> Melhor para data lakes e ambientes modernos.</li>
-                </ul>
-               
-            </section>
+            <h2>Endpoints</h2>
+            <ul>
+                <li>Exemplo de endpoint em uma API REST:</li>
+                <code>GET https://api.exemplo.com/users</code>
+                <li><strong>Base URL</strong>: https://api.exemplo.com</li>
+                <li><strong>Recurso</strong>: /users</li>
+                <li><strong>Parâmetros</strong> (opcionais): /users?id=1</li>
+            </ul>
 
-            <section id="data-warehousing">
-                <h2>Data Warehousing</h2>
-                <p>Um data warehouse é um repositório centralizado que organiza e armazena dados estruturados para consultas rápidas e análise de dados.</p>
-                <h3>Principais características:</h3>
-                <ul>
-                    <li>Dados estruturados.</li>
-                    <li>Focado em análise histórica e relatórios.</li>
-                    <li>Exemplos de ferramentas: Snowflake, Amazon Redshift, Google BigQuery.</li>
-                </ul>
-            </section>
+            <h2>Autenticação e Autorização</h2>
+            <ul>
+                <li><strong>Autenticação</strong>: Garante que um usuário é quem diz ser (ex: JWT, OAuth, API Key).</li>
+                <li><strong>Autorização</strong>: Define quais recursos um usuário pode acessar.</li>
+                <li><strong>Métodos comuns</strong>:
+                    <ul>
+                        <li>API Key (chave de API)</li>
+                        <li>OAuth 2.0 (utilizado por plataformas como Google e Facebook)</li>
+                        <li>JWT (JSON Web Token)</li>
+                    </ul>
+                </li>
+            </ul>
 
-            <section id="data-lake">
-                <h2>Data Lake</h2>
-                <p>Um data lake armazena dados em seu formato original (estruturado, semiestruturado e não estruturado). É mais flexível, mas requer governança adequada.</p>
-                <h3>Diferença entre Data Lake e Data Warehouse:</h3>
-                <ul>
-                    <li><strong>Data Warehouse:</strong> Dados estruturados, organizados para consultas.</li>
-                    <li><strong>Data Lake:</strong> Dados brutos, sem estrutura definida.</li>
-                </ul>
-            </section>
+            <h2>Request e Response</h2>
+            <ul>
+                <li><strong>Request (Requisição)</strong>: Envio de dados para a API
+                    <pre>
+GET /users/1 HTTP/1.1
+Host: api.exemplo.com
+Authorization: Bearer token
+                    </pre>
+                </li>
+                <li><strong>Response (Resposta)</strong>: Retorno da API.
+                    <pre>
+{
+    "id": 1,
+    "name": "João Silva",
+    "email": "joao@email.com"
+}
+                    </pre>
+                </li>
+                <li><strong>Códigos de status HTTP comuns</strong>:
+                    <ul>
+                        <li>200 OK - Sucesso</li>
+                        <li>201 Created - Recurso criado</li>
+                        <li>400 Bad Request - Erro na requisição</li>
+                        <li>401 Unauthorized - Falta de autenticação</li>
+                        <li>404 Not Found - Recurso não encontrado</li>
+                    </ul>
+                </li>
+            </ul>
 
-            <section id="big-data">
-                <h2>Big Data</h2>
-                <p><strong>Big Data</strong> refere-se a conjuntos massivos de dados que requerem tecnologias especiais para armazenamento e processamento.</p>
-                <h3>Os 5 Vs do Big Data:</h3>
-                <ul>
-                    <li><strong>Volume:</strong> Grande quantidade de dados.</li>
-                    <li><strong>Velocidade:</strong> Dados gerados em alta frequência.</li>
-                    <li><strong>Variedade:</strong> Diferentes formatos de dados.</li>
-                    <li><strong>Veracidade:</strong> Dados confiáveis e precisos.</li>
-                    <li><strong>Valor:</strong> Insights obtidos dos dados.</li>
-                </ul>
-            </section>
-            
-            <section id="armazenamento-dados">
-                <h2>Armazenamento de Dados</h2>
-                <p>O armazenamento de dados envolve escolher a melhor tecnologia para guardar informações de forma segura e acessível.</p>
-                <h3>Principais tipos de armazenamento:</h3>
-                <ul>
-                    <li><strong>Bancos de Dados Relacionais (SQL):</strong> Oracle, MySQL, PostgreSQL.</li>
-                    <li><strong>Bancos de Dados NoSQL:</strong> MongoDB, Cassandra, Redis.</li>
-                    <li><strong>Armazenamento em Nuvem:</strong> AWS S3, Azure Blob Storage, Google Cloud Storage.</li>
-                </ul>
-            </section>
-            
-            <section id="tecnologias-ferramentas">
-                <h2>Tecnologias e Ferramentas</h2>
-                <p>Na engenharia de dados, diversas tecnologias são usadas para diferentes etapas do processo:</p>
-                <h3>ETL:</h3>
-                <ul>
-                    <li>Apache NiFi</li>
-                    <li>Talend</li>
-                    <li>Informatica</li>
-                </ul>
-                <h3>Big Data:</h3>
-                <ul>
-                    <li>Hadoop</li>
-                    <li>Spark</li>
-                    <li>Kafka</li>
-                </ul>
-                <h3>Data Warehouse:</h3>
-                <ul>
-                    <li>Snowflake</li>
-                    <li>Amazon Redshift</li>
-                    <li>Google BigQuery</li>
-                </ul>
-                <h3>Data Lake:</h3>
-                <ul>
-                    <li>AWS S3</li>
-                    <li>Azure Data Lake</li>
-                    <li>Google Cloud Storage</li>
-                </ul>
-            </section>
-            
-            <section id="qualidade-dados">
-                <h2>Qualidade de Dados</h2>
-                <p>A qualidade de dados refere-se à precisão, consistência e integridade das informações.</p>
-                <h3>Principais aspectos:</h3>
-                <ul>
-                    <li><strong>Validade:</strong> Os dados estão no formato correto?</li>
-                    <li><strong>Consistência:</strong> Dados coerentes entre sistemas.</li>
-                    <li><strong>Integridade:</strong> Dados completos e sem lacunas.</li>
-                </ul>
-            </section>
-            
-            <section id="arquitetura-dados">
-                <h2>Arquitetura de Dados</h2>
-                <p>A arquitetura de dados define como os dados são coletados, armazenados e processados dentro de uma organização.</p>
-                <h3>Principais componentes:</h3>
-                <ul>
-                    <li><strong>Fonte de Dados:</strong> Origem das informações.</li>
-                    <li><strong>Pipeline de Dados:</strong> Fluxo de processamento.</li>
-                    <li><strong>Armazenamento:</strong> Data lake ou data warehouse.</li>
-                    <li><strong>Ferramentas de análise:</strong> Power BI, Tableau.</li>
-                </ul>
-            </section>
-            
-            <section id="arquitetura-serverless">
-                <h2>Arquitetura Serverless</h2>
-                <p>Na arquitetura serverless, o desenvolvedor não precisa gerenciar servidores diretamente. A infraestrutura é escalada automaticamente.</p>
-                <h3>Benefícios:</h3>
-                <ul>
-                    <li>Menos custos operacionais.</li>
-                    <li>Escalabilidade automática.</li>
-                    <li>Foco no código e nas funcionalidades.</li>
-                </ul>
-            </section>
+            <h2>Rate Limiting</h2>
+            <ul>
+                <li>Controle da quantidade de requisições permitidas por um período.</li>
+                <li>Exemplo de resposta ao exceder o limite:
+                    <pre>
+{
+    "error": "Too Many Requests",
+    "retry_after": 30
+}
+                    </pre>
+                </li>
+            </ul>
+
+            <h2>Versionamento e Documentação</h2>
+            <ul>
+                <li>Versionamento: Manter diferentes versões da API para compatibilidade.</li>
+                <li>Exemplo de versão no endpoint: <code>https://api.exemplo.com/v1/users</code></li>
+                <li>Documentação: Explicação clara do uso da API.
+                    <ul>
+                        <li>Ferramentas comuns: Swagger (OpenAPI), Postman, API Blueprint</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h2>Webhooks</h2>
+            <ul>
+                <li>Mecanismo para APIs notificarem eventos de forma assíncrona.</li>
+                <li>Exemplo: Quando um pagamento é aprovado, um webhook pode notificar um sistema externo.</li>
+                <li>
+                    <pre>
+{
+    "event": "payment_success",
+    "amount": 100.00,
+    "user": "joao@email.com"
+}
+                    </pre>
+                </li>
+            </ul>
+
+            <h2>Testes de API e Caching</h2>
+            <ul>
+                <li>Testes de API:
+                    <ul>
+                        <li>Ferramentas: Postman, Jest, Newman.</li>
+                        <li>Testes unitários, de integração e de carga.</li>
+                    </ul>
+                </li>
+                <li>Caching de API:
+                    <ul>
+                        <li>Evita requisições desnecessárias para otimizar performance.</li>
+                        <li>Ferramentas: Redis, Varnish, Cloudflare.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h2>API Gateway</h2>
+            <ul>
+                <li>Intermediário entre cliente e APIs internas.</li>
+                <li>Benefícios:
+                    <ul>
+                        <li>Segurança (autenticação, autorização)</li>
+                        <li>Controle de tráfego (rate limiting, caching)</li>
+                        <li>Balanceamento de carga</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h2>GraphQL</h2>
+            <ul>
+                <li>Alternativa ao REST que permite ao cliente definir exatamente os dados que precisa.</li>
+                <li>Exemplo de requisição GraphQL:
+                    <pre>
+query {
+    user(id: 1) {
+        name
+        email
+    }
+}
+                    </pre>
+                </li>
+                <li>Exemplo de resposta:
+                    <pre>
+{
+    "data": {
+        "user": {
+            "name": "João Silva",
+            "email": "joao@email.com"
+        }
+    }
+}
+                    </pre>
+                </li>
+            </ul>
         </article>
         
     </main>
     <footer>
-        <p>&copy; 2023 Meu Blog</p>
+        <p><small>&copy; Infinity 2025 - Todos os direitos reservados.</small></p>
     </footer>
 </body>
 </html>
